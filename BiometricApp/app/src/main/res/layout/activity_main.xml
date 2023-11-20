@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/sympButton"
+        android:layout_width="132dp"
+        android:layout_height="92dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="203dp"
+        android:layout_marginEnd="35dp"
+        android:background="#1D47C3"
+        android:text="Log Symptoms"
+        android:textColor="#EAE1E1"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_centerVertical="true" />
+
+    <Button
+        android:id="@+id/heartButton"
+        android:layout_width="241dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="5dp"
+        android:background="#1D47C3"
+        android:text="Measure Heart Rate"
+        android:textColor="#DFD4D4"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoView"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <TextView
+        android:id="@+id/viewHeart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/respButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:text="Measured Heart Rate: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#121010"
+        app:layout_constraintEnd_toEndOf="@+id/heartButton"
+        app:layout_constraintStart_toStartOf="@+id/heartButton"
+        app:layout_constraintTop_toBottomOf="@+id/heartButton" />
+
+    <Button
+        android:id="@+id/respButton"
+        android:layout_width="251dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="5dp"
+        android:background="#1D47C3"
+        android:text="Measure Respiratory Rate"
+        android:textColor="#F8F5F5"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewHeart"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/viewResp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/viewHeart"
+        android:layout_alignParentEnd="true"
+        android:text="Measured Respiratory Rate: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#121010"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/respButton"
+        app:layout_constraintStart_toStartOf="@+id/respButton"
+        app:layout_constraintTop_toBottomOf="@+id/respButton"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="166dp"
+        android:layout_height="244dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
